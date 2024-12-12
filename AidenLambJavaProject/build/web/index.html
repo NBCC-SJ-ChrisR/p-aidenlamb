@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Pizza Shack Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="login.js"></script>
+        <style>
+            body {
+                background-color:firebrick;
+                color: white;
+            }
+            h1 {
+                text-align: center;
+                font-size: 4em;
+                font-weight: bold;
+                font-family: impact, sans-serif;
+                color: white;
+            }
+            #buttons {
+                margin-left: 43%;
+            }
+            .hidden {
+                display: none;
+            }
+            .shown {
+                width: 20%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: 40.5%;
+                font-size: 2rem;
+            }
+            .formTitle {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="title">
+            <h1>Pizza Shack</h1>
+        </div>
+        <div id="buttons">
+            <button id="customers">Login as Customer</button>
+            <button id="employees">Login as Employee</button>
+        </div>
+        
+        <div id="empContent" class="hidden">
+            <div class="formTitle">Employee</div>
+            <div class="formTitle">Login</div>
+            <div>Username:</div><input id="empUserName" type="text"/>
+            <div>Password:</div><input id="empPassword" type="text"/>
+            <button id="empSubmit">Login</button>
+            <button id="custSwitch">Login as Customer</button>
+        </div>
+        
+        <div id="custContent" class="hidden">
+            <div class='formTitle'>Customer</div>
+            <div class='formTitle'>Login</div>
+            <div>Email:</div><input id="custEmail" type="text"/>
+            <div>Password:</div><input id="custPassword" type="text"/>
+            <button id="custSubmit">Login</button>
+            <button id="empSwitch">Login as Employee</button>
+        </div>
+        
+    </body>
+</html>

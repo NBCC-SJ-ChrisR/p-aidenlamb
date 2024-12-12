@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Pizza Shack (Employees)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color:firebrick;
+                color: white;
+            }
+            h1 {
+                text-align: center;
+                font-size: 4em;
+                font-weight: bold;
+                font-family: impact, sans-serif;
+                color: white;
+            }
+            #buttons {
+                margin-left: 43%;
+            }
+            .hidden {
+                display: none;
+            }
+            
+            table, tr, td, th {
+                border: solid thin white;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+            }
+            #empId {
+                float: right;
+                clear: left;
+            }
+            .formLabel {
+                width: 100px;
+                float: left;
+                margin-right: 5%;
+            }
+            #showOrders {
+                margin-left: 18%;
+            }
+            #showToppings {
+                margin-left: 28%;
+            }
+            .highlighted {
+                background-color: grey;
+            }
+            #AddToppingPanel {
+                margin-left: 40%;
+                margin-top: 2%;
+            }
+        </style>
+        <script src='employeeMain.js'></script>
+    </head>
+    <body>
+        <button id="logout">Logout</button>
+        <div id="title">
+            <h1>Pizza Shack</h1>
+        </div>
+        
+        <div id="buttons">
+            <button id="orders">View All Orders</button>
+            <button id="toppings">View Toppings</button>
+        </div>
+        
+        
+        <div id='showOrders' class='hidden'>
+            <div>
+                <button id='filled'>Show Filled</button>
+                <button id='pending'>Show Pending</button>
+                <button id='fillButton' disabled>Fill</button>
+                
+            </div>
+            <table id='ordersTable'>
+                
+            </table>
+        </div>
+        
+        <div id='showToppings' class='hidden'>
+            <div>
+                <button id='addTopping'>Add</button>
+                <button id='deleteTopping' disabled>Delete</button>
+            </div>
+            <table id='toppingsTable'>
+                
+            </table>
+        </div>
+        
+        
+        <div id="AddToppingPanel">
+            <div>
+                <div class="formLabel">Name</div><input id="toppingName" type="text">
+            </div>  
+            
+            <div>
+                <div class="formLabel">Active</div><input id="isActive" type="number">
+            </div>
+            <div>
+                <div class="formLabel">Price</div><input id="toppingPrice" type="number">
+            </div>  
+            
+            <div>
+                <button id="toppingDoneButton">Done</button>
+                <button id="toppingCancelButton">Cancel</button>
+            </div>
+        </div>
+    </body>
+</html>
